@@ -8,18 +8,10 @@
     <title>Document</title>
 </head>
 <body>
-<?php
-$name = "Nguyen Thanh Luan";
-$age = 31;
-$address = "Quang Ninh";
-echo '<strong>'.$name.'</strong>';
-echo $age;
-echo $address;
-
-define('PI', 3.14);
-define('NAME', 'Nguyen Thanh Luan');
-echo PI;
-echo NAME;
-?>
+<form action="do-login.php" method="get">
+    <input type="email" name="email"/>
+    <input type="password" name="password"/>
+    <button>Login</button>
+</form>
 </body>
 </html>
