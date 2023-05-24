@@ -4,7 +4,14 @@ if (isset($_FILES['img']) && $_FILES['img']['name']) {
     //đường dẫn file trong thư mục tạm
     $tmpPath = $_FILES['img']['tmp_name'];
     $fileName = $_FILES['img']['name'];
-    move_uploaded_file($tmpPath, 'uploads/' . $fileName);
+    $year = date('Y');
+    $month = date('m');
+    $newFolder = $month . '_' . $year;
+    //uploads/05_2023
+    if (!file_exists('uploads/' . $newFolder)) {
+        mkdir('uploads/' . $newFolder, 0775);
+    }
+    move_uploaded_file($tmpPath, 'uploads/' . $newFolder . '/' . time() . $fileName);
 }
 ?>
 <!doctype html>
