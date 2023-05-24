@@ -11,7 +11,7 @@ if (isset($_FILES['img']) && $_FILES['img']['name']) {
     if (!file_exists('uploads/' . $newFolder)) {
         mkdir('uploads/' . $newFolder, 0775);
     }
-    move_uploaded_file($tmpPath, 'uploads/' . $newFolder . '/' . time() . $fileName);
+    move_uploaded_file($tmpPath, 'uploads/' . $newFolder . '  ' . time() . $fileName);
 }
 ?>
 <!doctype html>
