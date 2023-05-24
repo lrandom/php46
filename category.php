@@ -1,13 +1,3 @@
-<?php
-session_start();
-if (isset($_SESSION['auth_user'])) {
-    //user đã đăng nhập
-    $authUser = $_SESSION['auth_user'];
-} else {
-    header('Location: login.php');
-}
-?>
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -18,9 +8,10 @@ if (isset($_SESSION['auth_user'])) {
     <title>Document</title>
 </head>
 <body>
-<?php if (isset($authUser)) {
-    echo $authUser['email'];
-} ?>
-<a href="logout.php">Logout</a>
+<div class="container">
+    <?php include 'commons/nav.php'; ?>
+    <section>Main Content Of Category Page</section>
+    <?php include 'commons/footer.php' ?>
+</div>
 </body>
 </html>
