@@ -26,6 +26,7 @@ if (isset($_FILES['img']) && $_FILES['img']['name']) {
 <body>
 <form method="post" enctype="multipart/form-data">
     <input type="file" name="img"/>
+
     <button>Submit</button>
 </form>
 </body>
