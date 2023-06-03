@@ -21,18 +21,25 @@ $result = mysqli_query($connected, $sql);
     <tr>
         <th>ID</th>
         <th>Name</th>
+        <th>Action</th>
     </tr>
     </thead>
     <tbody>
     <?php
     mysqli_fetch_assoc($result);
     while ($row = mysqli_fetch_assoc($result)) {
-?>
+        ?>
         <tr>
             <td><?php echo $row['id']; ?></td>
             <td><?php echo $row['name']; ?></td>
+            <td>
+                <a href="delete-province.php?id=<?php echo $row['id']; ?>"
+                   onclick="return confirm('Are you sure you want to delete ?')" href="">Xoá</a>
+
+                <a href="update-province.php?id=<?php echo $row['id']; ?>">Update</a>
+            </td>
         </tr>
-    <?php
+        <?php
     }
     ?>
 
