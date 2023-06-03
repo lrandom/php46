@@ -8,7 +8,7 @@ if (isset($_POST['province'])) {
         $sql = "INSERT INTO provinces(name) VALUES('" . $province . "')";
         mysqli_query($connected, $sql);
         $lastId = mysqli_insert_id($connected);
-        echo "Last ID:". $lastId;
+        echo "Last ID:" . $lastId;
     } else {
         echo "Thêm thất bại";
     }
