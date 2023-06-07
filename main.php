@@ -1,18 +1,24 @@
 <?php
 require_once 'Human.php';
-$luan = new Human();
-$luan->name = "Nguyễn Thành Luân";
-$luan->height = "1.72";
-$luan->weight = "75";
-$luan->age = 31;
+$luan = new Human("Nguyễn Thành Luân", 31, "75", "1.72");
 $luan->walk();//Nguyen Thanh Luan walk
 
-$trung = new Human();
-$trung->name = "Nguyễn Thành Trung";
-$trung->weight = "71";
-$trung->height = "1.74";
-$luan->height = "19";
+$trung = new Human("Nguyễn Thành Trung", 19, "71", "1.74");
+//$trung->name = "Nguyễn Thành Trung";
+echo $trung->getName();//Nguyễn Thành Trung
+$trung->setName("Nguyễn Thành Trung");
 $trung->walk();//Nguyen Thanh Trung walk
 $trung->eat();//Nguyen Thanh Trung eat
+
+require_once 'Student.php';
+$bob = new Student("BOB", 19, "71", "1.74");
+$bob->walk();//BOB walk
+$bob->test();//BOB study
+$bob->getStudentClassName();//error
+
+require_once 'ABTransporter.php';
+Student::$hihi;
+Student::haha();
+
 
 ?>
