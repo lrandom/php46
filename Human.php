@@ -35,7 +35,7 @@ class Human
         echo $this->name . " walk";
     }
 
-    final function eat()
+     function eat()
     {
         echo $this->name . " eat";
     }
