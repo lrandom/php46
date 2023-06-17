@@ -81,12 +81,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     <tbody>
                                     <?php foreach ($list as $item): ?>
                                         <tr>
-                                            <td><?php echo $item['id']; ?></td>
-                                            <td><?php echo $item['name']; ?></td>
+                                            <td><?php echo $item->id; ?></td>
+                                            <td><?php echo $item->name; ?></td>
                                             <td>
-                                                <a class="btn btn-warning" href="edit.php?id=<?php echo $item['id']; ?>">Edit</a>
+                                                <a class="btn btn-warning" href="edit.php?id=<?php echo $item->id; ?>">Edit</a>
                                                 <a class="btn btn-danger" onclick="return confirm('Delete ?')"
-                                                   href="?action=delete&id=<?php echo $item['id']; ?>">Delete</a>
+                                                   href="?action=delete&id=<?php echo $item->id; ?>">Delete</a>
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>

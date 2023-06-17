@@ -15,8 +15,8 @@ class ProvinceDAL extends DB implements IDAL
     public function getList()
     {
         // TODO: Implement getList() method.
-        $rs = $this->db->query("SELECT * FROM " . $this->tableName);
-        return $rs;
+        $rs = $this->db->query("CALL getProvinces()");
+        return $rs->fetchAll(PDO::FETCH_OBJ);
     }
 
     public function getOneById($id)
